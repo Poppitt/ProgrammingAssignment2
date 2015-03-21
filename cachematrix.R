@@ -34,6 +34,11 @@ cacheSolve <- function(x, ...) {
             message("getting cached data")
             return(im)
       }
+      
+      ## check that MASSF package is installed to assure
+      ## that the ginv() function will be available;
+      ## if not, install the MASSF package
+      
       if (!is.installed("MASSF")){
             install.packages("MASS")
       }
